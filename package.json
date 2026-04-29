@@ -1,0 +1,37 @@
+{
+  "name": "open-lama",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Local Llama AI with TypeScript",
+  "main": "index.ts",
+  "scripts": {
+    "start": "node --import 'data:text/javascript,import { register } from \"node:module\"; import { pathToFileURL } from \"node:url\"; register(\"ts-node/esm\", pathToFileURL(\"./\"));' index.ts",
+    "serve": "node --import 'data:text/javascript,import { register } from \"node:module\"; import { pathToFileURL } from \"node:url\"; register(\"ts-node/esm\", pathToFileURL(\"./\"));' index.ts --service"
+  },
+  "dependencies": {
+    "@clack/prompts": "^1.2.0",
+    "@hapi/boom": "^10.0.1",
+    "@whiskeysockets/baileys": "^7.0.0-rc.9",
+    "body-parser": "^2.2.2",
+    "boxen": "^8.0.1",
+    "chalk": "^4.1.2",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "figlet": "^1.11.0",
+    "gradient-string": "^3.0.0",
+    "jimp": "^0.16.1",
+    "node-llama-cpp": "^2.8.10",
+    "ora": "^9.4.0",
+    "pino": "^10.3.1",
+    "qrcode-terminal": "^0.12.0",
+    "terminal-image": "^4.3.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^20.19.39",
+    "@types/qrcode-terminal": "^0.12.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.0.0"
+  }
+}
